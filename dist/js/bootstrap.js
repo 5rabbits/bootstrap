@@ -1553,7 +1553,7 @@ if (typeof jQuery === 'undefined') {
 
   Tooltip.prototype.replaceArrow = function (delta, dimension, isVertical) {
     this.arrow()
-      .css(isVertical ? 'left' : 'top', 50 * (1 - delta / dimension) + '%')
+      .css(isVertical ? 'left' : 'top', (dimension - delta) / 2 + 'px')
       .css(isVertical ? 'top' : 'left', '')
   }
 
